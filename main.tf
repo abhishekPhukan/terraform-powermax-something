@@ -1,4 +1,16 @@
 
+terraform {
+  required_providers {
+    powermax = {
+      source = "dell/powermax"
+      version = "1.0.0"
+    }
+  }
+}
+
+provider "powermax" {
+  # Configuration options
+}
 
 # Available actions: Create, Update (name, initiator, consistent_lun, host_flags), Delete and Import an existing host from the PowerMax Array.
 # After `terraform apply` of this example file it will create a new host with the name set in `name` attribute on the PowerMax
